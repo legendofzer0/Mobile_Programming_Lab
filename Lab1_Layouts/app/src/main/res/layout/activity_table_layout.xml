@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <TableRow android:background="#EEEEEE">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1C1"
+            android:background="#DDDDDD"
+            android:padding="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1C2"
+            android:background="#CCCCCC"
+            android:padding="16dp" />
+    </TableRow>
+
+    <TableRow android:background="#CCCCCC">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2C1"
+            android:background="#BBBBBB"
+            android:padding="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2C2"
+            android:background="#AAAAAA"
+            android:padding="16dp" />
+    </TableRow>
+
+    <TableRow android:background="#AAAAAA">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C1"
+            android:background="#999999"
+            android:padding="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C2"
+            android:background="#888888"
+            android:padding="16dp" />
+    </TableRow>
+
+</TableLayout>
