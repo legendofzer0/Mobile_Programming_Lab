@@ -2,6 +2,7 @@ package com.example.lab_two_;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +32,6 @@ public class Simple_Form_Intent extends AppCompatActivity {
         resultView =  findViewById(R.id.result);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,countries);
-        adapter.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item);
         spinnerCountry.setAdapter(adapter);
 
         btnSubmit.setOnClickListener(view -> {
@@ -54,5 +54,15 @@ public class Simple_Form_Intent extends AppCompatActivity {
             intent.putExtra("result",result);
             startActivity(intent);
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data ){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode == 2){
+            String msg = data.getStringExtra("message");
+            Log.d("TAG", "onActivityResult: ");
+            Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
+        }
     }
 }

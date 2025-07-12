@@ -15,9 +15,6 @@ public class MyFragment extends Fragment {
 
     private static final String TAG = "MyFragmentLifecycle";
 
-    public MyFragment() {
-        super(R.layout.fragment_a);
-    }
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -32,9 +29,9 @@ public class MyFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView( LayoutInflater inflater,
+                              ViewGroup container,
+                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
         return inflater.inflate(R.layout.fragment_a, container, false);
     }
